@@ -12,18 +12,18 @@ import br.inatel.labs.labjpa.dto.TotalCompradoPorFornecedorDTO;
 import br.inatel.labs.labjpa.service.RelatorioService;
 
 @SpringBootTest
-class RelatorioServiceTest {
+public class RelatorioServiceTest {
 
-    @Autowired
-    private RelatorioService service;
-
-    @Test
-    void test() {
-        List<TotalCompradoPorFornecedorDTO> listaDTO = service.pesquisarTotalCompradoPorFornecedor();
-
-        assertFalse( listaDTO.isEmpty() );
-
-        listaDTO.forEach( System.out::println );
-    }
-
+	@Autowired
+	private RelatorioService service;
+	
+	@Test
+	public void test() {
+		List<TotalCompradoPorFornecedorDTO> listaDTO = service.pesquisarTotalCompradoPorFornecedor();
+		
+		assertFalse(listaDTO.isEmpty());
+		
+		listaDTO.forEach(System.out::println);
+	}
+	
 }
